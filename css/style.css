@@ -1,0 +1,75 @@
+#myCanvas {
+    border: 1px solid #9C9898;
+}
+#myCanvas2 {
+    border: 1px solid #9C9898;
+}
+#myCanvas3 {
+    border: 1px solid #9C9898;
+}
+#myCanvas4 {
+    border: 1px solid #9C9898;
+}
+body{
+    text-align: center;
+}
+h1{
+    width: 100%;
+    
+}
+.spacio{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    display: block;
+}
+label{
+    color: #f5f5f5;
+}
+input[type="radio"]{
+    display: none;
+}
+.puente{
+    background: #520AF7;
+}
+.borrar{
+    background: #D65C09;
+}
+.fractura{
+    background: #E42828 !important;
+}
+.restauracion{
+    background: #3F32E5 !important;
+}
+
+.estraccion{
+    background: #b2ffff !important;
+}
+.implante{
+    background: #00bb2d !important;
+}
+
+.infoPatient{
+    border: solid 1px black;
+    width: 800px;
+    height: 500px;
+}
+
+@media screen and (max-width:767px){
+    .space1{
+        width: 100%;
+        display: flex;
+    }  
+    .space1 .spacio{
+        width: 300px;
+        margin-left: 5px;
+       
+    }
+    label{
+        width: 100px;
+    }
+}
+

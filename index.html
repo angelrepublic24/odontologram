@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.structure.min.css">	
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.theme.min.css">	
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Odontologia</title>
+</head>
+<body>
+
+    <h1 class="text-center">Odontograma FTD :)</h1>
+
+    <div class="container py-2">
+		<div class="row">
+			<div class="col-12 offset-1">
+				<form action="">
+					<div class="form-group row">
+						<div class="col-12 col-md-5 mb-3">
+							
+							<input type="text" class="form-control" placeholder="ID del paciente" name="id" id="id">	
+						</div>
+						<div class="col-12 col-md-5 mb-3">
+							
+							<input type="text" class="form-control" placeholder="Nombre del paciente" name="name" id="name">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="radio" class="col-xs-12 col-md-3 space1 offset-2 offset-md-0"  >
+                    <div id="fractura" class="spacio fractura"><input type="radio" id="radio1" name="accion" value="fractura" checked="checked" /><label for="radio1">Fractura</label></div>
+                    <div class="spacio restauracion"><input type="radio" id="radio2" name="accion" value="restauracion" /><label for="radio2">Restauracion</label></div>
+                    <div class="spacio estraccion"><input type="radio" id="radio4" name="accion" value="extraccion" /><label for="radio4">Extraccion</label></div>
+                    <div class="spacio implante"><input type="radio" id="radio6" name="accion" value="implante" /><label for="radio6">Implante</label></div>
+                
+                <div class="spacio puente"><input type="radio" id="radio5" name="accion" value="puente" /><label for="radio5">Puente</label></div>
+                <div class="spacio borrar"><input type="radio" id="radio3" name="accion" value="borrar" /><label for="radio3">Borrar</label></div>
+            </div>
+    
+                <div id="canvasesdiv" class="col-md-7 mx-4" style="position:relative; width:810px; height:300px">
+                    <canvas id="myCanvas" width="810" height="300" style="z-index: 1; position:absolute; left:0px; top:0px;"></canvas>
+                    <canvas id="myCanvas2" width="810" height="300" style="z-index: 2; position:absolute; left:0px; top:0px;"></canvas>
+                    <canvas id="myCanvas3" width="810" height="300" style="z-index: 3; position:absolute; left:0px; top:0px;"></canvas>
+                    <canvas id="myCanvas4" width="810" height="300" style="z-index: 4; position:absolute; left:0px; top:0px;"></canvas>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+        <button class="btn btn-success" id="saveInfo" data-toggle="modal" data-target="#fm-modal">Guardar</button>
+        <button class="btn btn-primary" data-toggle="collapse" id="info" data-target="#viewInfo" aria-expanded="false" aria-controls="viewInfo">Ver Paciente</button>
+        <div class="modal fade" id="fm-modal" tabindex="-1" role="dialog" aria-labelledby="fm-modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header row">
+                        <h6 class="col-4" id="idPatient">ID: </h6>
+                        <h6 class="col-8" id="patientName">Paciente: </h6>
+                        <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Procedimiento</th>
+                                        <th scope="col">Diente</th>
+                                        <th scope="col">Seccion</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody class="saveTable">
+                                    <tr class="tr">
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" id="endInfo">Nuevo Paciente </button>
+				
+
+    </div>
+    <br/>
+    <div id="radio_seccion" style='display:none'>
+        <input type="radio" id="radio_1" name="seccion" value="seccion" checked="checked" /><label for="radio_1">Seccion</label>
+        <input type="radio" id="radio_2" name="seccion" value="diente" /><label for="radio_2">Diente</label>
+    </div>
+
+
+    <div class="container" >
+        <div class="datos" id="datos">
+            <table class="table table-bordered table-hover collapse" id="viewInfo">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Accion</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/logic.js"></script>
+    
+</body>
+</html>
